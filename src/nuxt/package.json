@@ -1,0 +1,30 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "start": "nuxt start"
+  },
+  "dependencies": {
+    "@nuxt/http": "^0.6.4",
+    "@types/lodash": "^4.17.15",
+    "axios": "^1.7.9",
+    "nuxt": "^3.15.4",
+    "vee-validate": "^4.15.0",
+    "vue": "latest",
+    "vue-router": "latest",
+    "yup": "^1.6.1",
+    "yup-locale-ja": "^1.0.0"
+  },
+  "devDependencies": {
+    "rollup": "^4.34.1"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-musl": "^4.34.2"
+  }
+}

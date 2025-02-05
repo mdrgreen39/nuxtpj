@@ -21,17 +21,8 @@ COPY php.ini /usr/local/etc/php/php.ini
 
 WORKDIR /var/www
 
-# cronfileを追加
-COPY ./cronfile /etc/cron.d/cronfile
+# cronfileとstart.shの削除（コピーしない）
+# cronfileの設定やstart.shのスクリプトも不要
 
-# cronfileのパーミッションを設定し、cronサービスを起動
-RUN chmod 0644 /etc/cron.d/cronfile
-
-# cronサービスをリスタート
-RUN crontab /etc/cron.d/cronfile
-
-# cronサービスのスタートと php-fpmの同時起動を行うスクリプト
-COPY start.sh /start.sh
-RUN chmod +x /start.sh
-
-CMD ["/start.sh"]
+# PHP-FPMを直接起動する
+CMD ["php-fpm"]
