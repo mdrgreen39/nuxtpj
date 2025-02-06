@@ -6,7 +6,6 @@
 
         <main>
             <!-- ここにページ固有のコンテンツが表示されます -->
-            <CommonHeader />
             <slot></slot>
         </main>
 

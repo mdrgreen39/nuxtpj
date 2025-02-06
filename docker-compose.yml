@@ -65,7 +65,7 @@ services:
     volumes:
       - ./src/nuxt:/usr/src/app
     ports:
-      - "3000:3000"
+      - "3001:3001"
     networks:
       - app-network
     depends_on:
